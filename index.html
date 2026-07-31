@@ -100,6 +100,20 @@
     .learn-grid{ grid-template-columns:repeat(2,1fr); }
   }
 
+  /* COMMENTS */
+  .comments-wrap{ max-width:960px; margin:44px auto 0; display:grid; grid-template-columns:1fr 1fr; gap:0 40px; }
+  .comment{ display:flex; gap:14px; margin-bottom:26px; }
+  .comment-avatar{ width:44px; height:44px; border-radius:50%; object-fit:cover; flex-shrink:0; }
+  .comment-name{ font-weight:700; font-size:0.95rem; color:var(--ink); margin-bottom:4px; }
+  .comment-text{ color:var(--ink); font-size:0.94rem; line-height:1.5; }
+  .comment-meta{ margin-top:8px; display:flex; gap:18px; font-size:0.85rem; color:var(--ink-soft); }
+  .comment-meta .report{ color:var(--ink-soft); font-weight:600; }
+  .comment.reply{ margin-left:34px; margin-top:10px; }
+  .comment.reply .comment-avatar{ width:36px; height:36px; }
+  @media (max-width:820px){
+    .comments-wrap{ grid-template-columns:1fr; }
+  }
+
   /* CERTIFICATE */
   .cert-wrap{ display:grid; grid-template-columns:1.1fr 1fr; gap:40px; align-items:center; max-width:1000px; margin:0 auto; background:var(--white); border-radius:20px; padding:40px; border:1px solid var(--line); }
   .cert-wrap img{ border-radius:12px; }
@@ -337,6 +351,64 @@
         <div class="stars">★★★★★</div>
         <p>"Nunca imaginei que ia conseguir criar peixe no meu quintal. Segui o passo a passo, hoje já tô na segunda leva e já indiquei pra dois amigos aqui da região."</p>
         <div class="testi-name">— Aluno · Interior de MG</div>
+      </div>
+    </div>
+
+    <div class="comments-wrap">
+      <div>
+        <div class="comment">
+          <img class="comment-avatar" src="comment-luiz.jpg" alt="Luiz Inacio">
+          <div>
+            <div class="comment-name">Luiz Inacio</div>
+            <p class="comment-text">Como criador de tilápias em caixas d'água, eu estava procurando maneiras de melhorar a eficiência da minha operação. Este ebook foi um divisor de águas. Aprendi como criar um ambiente ideal e fornecer a nutrição certa para minhas tilápias. As estratégias de crescimento rápido funcionam como mágica. Agora, colho os benefícios de peixes maiores e mais saudáveis.</p>
+            <div class="comment-meta"><span>6 meses</span><span class="report">Denunciar</span></div>
+          </div>
+        </div>
+        <div class="comment reply">
+          <img class="comment-avatar" src="comment-bons-negocios.jpg" alt="Bons negócios">
+          <div>
+            <div class="comment-name">Bons négocios</div>
+            <p class="comment-text">Ficamos muitos felizes em saber que está funcionando nosso método, estamos a dispoção se precisar tirar duvidas ok.<br><br>Obrigado pela confiança.</p>
+            <div class="comment-meta"><span>6 meses</span><span class="report">Denunciar</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="comment">
+          <img class="comment-avatar" src="comment-paulo.jpg" alt="Paulo Oliveira">
+          <div>
+            <div class="comment-name">Paulo Oliveira</div>
+            <p class="comment-text">Cara, parabéns pelo material, super recomendo pessoal, pode comprar que vale a pena cada centavo, estava meio inseguro no começo, mas deu tudo certo. Vou começar colocar em pratica essa semana</p>
+            <div class="comment-meta"><span>5 meses</span><span class="report">Denunciar</span></div>
+          </div>
+        </div>
+
+        <div class="comment">
+          <img class="comment-avatar" src="comment-ruan.jpg" alt="Ruan matos">
+          <div>
+            <div class="comment-name">Ruan matos</div>
+            <p class="comment-text">Comprei, realmente é muito bom, tem bastante material, tudo o que é preciso para começar de fato.</p>
+            <div class="comment-meta"><span>6 meses</span><span class="report">Denunciar</span></div>
+          </div>
+        </div>
+
+        <div class="comment">
+          <img class="comment-avatar" src="comment-junior.jpg" alt="Junior Marques">
+          <div>
+            <div class="comment-name">Junior Marques</div>
+            <p class="comment-text">Como um iniciante na criação de tilápias, eu estava perdido quanto a como começar. Este ebook foi minha bússola. Aprendi a montar minhas caixas d'água, a selecionar as melhores tilápias e a mantê-las saudáveis. As estratégias para acelerar o crescimento têm sido surpreendentemente eficazes. Estou impressionado com os resultados que obtive. Muito obrigado!<br>Podem comprar galera, super indico sim.</p>
+            <div class="comment-meta"><span>6 meses</span><span class="report">Denunciar</span></div>
+          </div>
+        </div>
+        <div class="comment reply">
+          <img class="comment-avatar" src="comment-bons-negocios.jpg" alt="Bons négocios">
+          <div>
+            <div class="comment-name">Bons négocios</div>
+            <p class="comment-text">Boa, muito obrigado pela confiança pessoal, estamos juntos, qualquer dúvidas estamos a disposição.<br><br>Lembre-se, juntos somos mais fortes.</p>
+            <div class="comment-meta"><span>6 meses</span><span class="report">Denunciar</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
