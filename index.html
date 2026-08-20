@@ -525,5 +525,52 @@
   </div>
 </footer>
 
+<!-- SOCIAL PROOF TOAST -->
+<style>
+  .proof-toast{ position:fixed; left:18px; bottom:18px; z-index:999; background:#FFFFFF; border:1px solid #D7E5E2; border-radius:12px; padding:14px 18px; display:flex; align-items:center; gap:12px; box-shadow:0 12px 30px rgba(14,59,62,0.18); max-width:320px; transform:translateY(120%); opacity:0; transition:transform .4s ease, opacity .4s ease; font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+  .proof-toast.show{ transform:translateY(0); opacity:1; }
+  .proof-toast .proof-icon{ flex-shrink:0; width:38px; height:38px; border-radius:50%; background:#E6F3F0; display:flex; align-items:center; justify-content:center; font-size:1.2rem; }
+  .proof-toast .proof-text{ font-size:0.88rem; font-weight:600; color:#0E3B3E; line-height:1.35; }
+  .proof-toast .proof-text b{ color:#D93A2B; }
+  @media (max-width:480px){
+    .proof-toast{ left:12px; right:12px; bottom:12px; max-width:none; }
+  }
+</style>
+
+<div class="proof-toast" id="proofToast">
+  <span class="proof-icon">🔥</span>
+  <span class="proof-text" id="proofText"></span>
+</div>
+
+<script>
+  (function(){
+    var messages = [
+      '<b>8 pessoas</b> estão adquirindo esse produto agora',
+      '<b>11 pessoas</b> estão vendo esta página neste momento',
+      '<b>6 pessoas</b> estão finalizando a compra agora',
+      '<b>9 pessoas</b> estão adquirindo esse produto agora'
+    ];
+    var toast = document.getElementById('proofToast');
+    var textEl = document.getElementById('proofText');
+    var i = 0;
+
+    function showToast(){
+      textEl.innerHTML = messages[i % messages.length];
+      i++;
+      toast.classList.add('show');
+      setTimeout(function(){
+        toast.classList.remove('show');
+      }, 4500);
+    }
+
+    setTimeout(function(){
+      showToast();
+      setInterval(showToast, 8000);
+    }, 2000);
+  })();
+</script>
+
+  
+  
 </body>
 </html>
